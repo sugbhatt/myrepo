@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BootappController {
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String greeting() throws UnknownHostException{
         return "Hello Boot! Date: " + new SimpleDateFormat("yyyy-MM-dd:HH.mm.ss").format(new Date()) + " from Host: " + InetAddress.getLocalHost().getHostName(); 
     }
