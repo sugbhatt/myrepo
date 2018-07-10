@@ -35,11 +35,9 @@
                 </exclusion>
             </exclusions>			
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 	
@@ -50,30 +48,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<!-- <plugin>
-				<groupId>io.fabric8</groupId>
-				<artifactId>fabric8-maven-plugin</artifactId>
-				<version>3.5.40</version>
-				<executions>
-				<execution>
-					<id>fmp</id>
-					<goals>
-					<goal>resource</goal>
-					<goal>helm</goal>
-					<goal>build</goal>
-					</goals>
-				</execution>
-				</executions>
-			</plugin> --> 			
-		</plugins>
-	</build>
-
 
 </project>
