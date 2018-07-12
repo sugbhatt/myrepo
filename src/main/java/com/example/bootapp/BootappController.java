@@ -13,6 +13,11 @@ public class BootappController {
 
     @RequestMapping("/hello")
     public String greeting() throws UnknownHostException{
+        double x = 0.0001;
+        for (int i = 0; i <= 2000000; i++) {
+            x += Math.sqrt(x); 
+        }
+
         return "Hello Boot! Date: " + new SimpleDateFormat("yyyy-MM-dd:HH.mm.ss").format(new Date()) + " from Host: " + InetAddress.getLocalHost().getHostName(); 
     }
 }
