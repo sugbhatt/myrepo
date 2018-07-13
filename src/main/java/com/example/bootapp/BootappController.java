@@ -14,7 +14,7 @@ public class BootappController {
     @RequestMapping("/hello")
     public String greeting() throws UnknownHostException{
         double x = 0.0001;
-        for (int i = 0; i <= 1000000; i++) {
+        for (int i = 0; i <= 100000; i++) {
             x += Math.sqrt(x); 
         }
 
