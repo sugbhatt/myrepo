@@ -8,12 +8,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvn clean package -s mvn-settings.xml'
       }
     }
     stage('Deploy & Test') {
       steps {
-        sh 'mvn fabric8:deploy'
+        sh 'mvn fabric8:deploy -s mvn-settings.xml'
       }
     }
   }
