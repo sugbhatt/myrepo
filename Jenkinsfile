@@ -3,6 +3,7 @@ node {
     git 'https://github.com/sugbhatt/myrepo'
   }
   stage('Clean') {
-    sh 'mvn clean'
+    def mvnHome = tool name: 'M3', type: 'maven'
+    sh "${mvnHome}/bin/mvn clean"
   }
 }
