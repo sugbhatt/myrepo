@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean package -s MySettings'
+        sh 'mvn clean package -s settings.xml'
       }
     }
   }
