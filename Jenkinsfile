@@ -1,14 +1,14 @@
 pipeline {
   agent {
-    node {
-      label 'maven'
+    docker {
+      image 'maven:3-alpine'
     }
     
   }
   stages {
     stage('Build') {
       steps {
-        sh 'echo PATH = ${PATH}'
+        sh 'mvn clean package'
       }
     }
   }
