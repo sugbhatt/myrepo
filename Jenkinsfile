@@ -1,5 +1,4 @@
 node {
-  agent any
   stage('SCM Checkout') {
     git 'https://github.com/sugbhatt/myrepo'
   }
