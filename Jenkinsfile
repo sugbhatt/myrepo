@@ -1,11 +1,5 @@
 node {
   agent any
-  
-  environment {
-   http_proxy = 'http://proxy.cognizant.com:6050'
-   https_proxy = 'http://proxy.cognizant.com:6050'  
-  }
-  
   stage('SCM Checkout') {
     git 'https://github.com/sugbhatt/myrepo'
   }
