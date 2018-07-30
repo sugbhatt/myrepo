@@ -1,15 +1,5 @@
-pipeline {
-  agent {
-    node {
-      label 'maven'
-    }
-    
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'mvn clean package'
-      }
-    }
+node {
+  stage ('Clean') {
+    sh 'mvn clean'
   }
 }
