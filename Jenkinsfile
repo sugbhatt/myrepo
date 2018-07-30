@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('Clean') {
       steps {
-        sh '''mvn clean
-'''
+        def mvnHome = tool name: 'M3', type: 'maven'
+        sh "${mvnHome}/bin/mvn clean"
       }
     }
   }
